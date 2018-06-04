@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getAllFiles } from '../../actions/filesData/filesData';
+import _ from 'lodash';
 
 const mapDispatchToProps = () => ({
   getAllFiles: () => getAllFiles(),
@@ -20,9 +21,14 @@ class MasterPageElm extends React.Component {
     this.props.getAllFiles();
   }
 
+  componentDidMount() {
+    console.log(this.props.files);
+  }
+
   render() {
     return (
-      <div />
+      <div>{this.props.files.map((file, index) =>
+        <div key={index}>{file.title}</div>)}</div>
     )
   }
 }
