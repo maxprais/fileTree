@@ -2,7 +2,7 @@ import React from "react";
 import './style.css';
 import PropTypes from 'prop-types';
 
-export default class File extends React.Component {
+export class File extends React.Component {
 
   constructor(props) {
     super(props);
@@ -21,7 +21,7 @@ export default class File extends React.Component {
       </div>
     )
   }
-};
+}
 
 File.propTypes = {
   id: PropTypes.string,

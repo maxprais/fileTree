@@ -11,6 +11,5 @@ export const getAllFiles = () => {
 export const getFilesById = (id) => {
   const allFiles = cloneDeep(map(FILES));
   const groupedFiles = filter(allFiles, { parentId: id });
-  console.log('groupedFiles', groupedFiles);
   store.dispatch({ type: FILES_ACTION_TYPES.GET_FILES_BY_ID, payload: groupedFiles });
 };
