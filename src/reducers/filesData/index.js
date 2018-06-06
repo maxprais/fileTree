@@ -1,5 +1,5 @@
 import { FILES_ACTION_TYPES } from '../../actions/filesData/actionTypes';
-import _ from 'lodash';
+import { map, chain } from 'lodash';
 
 const initialState = {
   files: []
@@ -7,8 +7,18 @@ const initialState = {
 export const FilesReducer = (state = initialState, action) => {
   switch (action.type) {
     case FILES_ACTION_TYPES.GET_ALL_FILES:
-      console.log(_.map(action.payload));
-      return { ...state, files: _.map(action.payload) };
+      return { ...state, files: map(action.payload) };
+    case FILES_ACTION_TYPES.GET_FILES_BY_ID:
+      const files = chain(state.files)
+        .flatten()
+        .concat(action.payload)
+        .uniqBy('id')
+        .groupBy('parentId')
+        .map()
+        .value();
+      console.log(state.files);
+      console.log('files', files);
+      return { ...state, files: files };
     default:
       return state;
   }
