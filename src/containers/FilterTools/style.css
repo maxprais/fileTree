@@ -1,0 +1,17 @@
+.filter-tools-header {
+  background-color: #0d62b5;
+  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  display: grid;
+  grid-template-columns: 100px 25%;
+}
+.logo {
+  background-image: url('./img/creditmint-logo.png');
+  background-size: contain;
+  width: 40px;
+  margin-left: 20px;
+}

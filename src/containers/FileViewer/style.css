@@ -1,3 +1,5 @@
 .file-viewer {
   display: grid;
+  position: relative;
+  top: 50px;
 }

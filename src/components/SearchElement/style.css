@@ -1,0 +1,10 @@
+.search-field {
+  border-radius: 4px;
+  border-style: none;
+  height: 20px;
+  align-self: center;
+  padding-left: 10px;
+}
+.search-field:focus {
+  outline: none;
+}

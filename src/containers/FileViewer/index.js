@@ -1,12 +1,14 @@
 import React from "react";
 import { FileBranch } from '../../components/FileBranch';
+import { FilterTools } from '../FilterTools';
 import { connect } from "react-redux";
-import { getFilesById } from '../../actions/filesData/filesData';
+import { getFilesById, searchFilesByTitle } from '../../actions/filesData/filesData';
 import { size } from 'lodash';
 import './style.css';
 
 const mapDispatchToProps = () => ({
-  getFilesById: (id) => getFilesById(id)
+  getFilesById: (id) => getFilesById(id),
+  searchFilesByTitle: (text) => searchFilesByTitle(text)
 });
 
 const mapStateToProps = state => ({
@@ -19,6 +21,7 @@ class FileViewerElm extends React.Component {
     super(props);
     this.state = {};
     this.onFileSelect = this.onFileSelect.bind(this);
+    this.onElementChange = this.onElementChange.bind(this);
   }
 
   componentWillMount() {
@@ -27,8 +30,14 @@ class FileViewerElm extends React.Component {
   }
 
   onFileSelect(id) {
-    console.log('parentId', id);
     this.props.getFilesById(id);
+  }
+
+  onElementChange(key, text) {
+    let conditions = {
+      search: () => this.props.searchFilesByTitle(text)
+    };
+    conditions[key].apply();
   }
 
   render() {
@@ -39,6 +48,7 @@ class FileViewerElm extends React.Component {
     return (
       <div className="file-viewer"
            style={branchStyle}>
+        <FilterTools onElementChange={this.onElementChange} />
         {this.props.files.map((files, index) =>
           <FileBranch key={index}
                       files={files}

@@ -8,6 +8,10 @@ export const getAllFiles = () => {
   store.dispatch({ type: FILES_ACTION_TYPES.GET_ALL_FILES, payload: allFiles });
 };
 
+export const searchFilesByTitle = (text) => {
+  store.dispatch({ type: FILES_ACTION_TYPES.SEARCH_FILES_BY_TITLE, payload: text });
+};
+
 export const getFilesById = (id) => {
   const allFiles = cloneDeep(map(FILES));
   const groupedFiles = filter(allFiles, { parentId: id });

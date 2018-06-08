@@ -3,10 +3,10 @@ import { map, set, isNull, chain } from 'lodash';
 export class TreeDepthCalculator {
 
   getFilesTreeDepth(files, allFiles) {
-    return map(files, (group) => {
-      const depth = this._getFileTreeDepth(group.parentId, allFiles);
-      set(group, 'depth', depth);
-      return group;
+    return map(files, (file) => {
+      const depth = this._getFileTreeDepth(file.parentId, allFiles);
+      set(file, 'depth', depth);
+      return file;
     })
   }
 
