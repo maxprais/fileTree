@@ -1,25 +1,32 @@
 import React from "react";
 import { File } from '../../components/File';
 import PropTypes from 'prop-types';
+import './style.css';
 
 export class FileBranch extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      selectedFileId: null
+    };
     this.onFileSelect = this.onFileSelect.bind(this);
   }
 
   onFileSelect(id) {
+    this.setState({ selectedFileId: id });
     this.props.onFileSelect(id);
   }
 
   render() {
     return (
-      <div>{this.props.files.map((file, index) =>
+      <div className="file-branch">{this.props.files.map((file, index) =>
           <File key={index}
                 id={file.id}
                 title={file.title}
-                onSelect={this.onFileSelect}/>)
+                selectedFileId={this.state.selectedFileId}
+                onSelect={this.onFileSelect}/>
+          )
       }
       </div>
     )

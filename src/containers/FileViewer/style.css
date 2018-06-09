@@ -1,5 +1,12 @@
 .file-viewer {
   display: grid;
   position: relative;
-  top: 50px;
+  top: 90px;
+  padding: 0 20px;
+}
+
+@media (max-width: 720px) {
+  .file-viewer {
+    grid-template-columns: auto !important;
+  }
 }

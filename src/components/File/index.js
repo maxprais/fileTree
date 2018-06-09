@@ -13,9 +13,14 @@ export class File extends React.Component {
     this.props.onSelect(this.props.id);
   }
 
+  isFileSelected() {
+    return this.props.selectedFileId === this.props.id;
+  }
+
   render() {
     return (
-      <div className="file-container"
+      <div className={`file-container
+                      ${this.isFileSelected() ? 'selected' : ''}`}
            onClick={this.onSelect}>
         <span>{this.props.title}</span>
       </div>
@@ -25,6 +30,7 @@ export class File extends React.Component {
 
 File.propTypes = {
   id: PropTypes.string,
+  selectedFileId: PropTypes.string,
   title: PropTypes.string,
   onSelect: PropTypes.func
 };

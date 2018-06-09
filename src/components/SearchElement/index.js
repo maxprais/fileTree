@@ -21,7 +21,7 @@ export class SearchElement extends React.Component {
   render() {
     return (
       <input className="search-field"
-             placeholder="Search..."
+             placeholder="Search all files"
              onKeyUp={this.onElementChange}  />
     )
   }

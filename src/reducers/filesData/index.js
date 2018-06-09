@@ -1,5 +1,5 @@
 import { FILES_ACTION_TYPES } from '../../actions/filesData/actionTypes';
-import { map, chain, cloneDeep, escapeRegExp } from 'lodash';
+import { map, chain, cloneDeep, escapeRegExp, size, groupBy } from 'lodash';
 import { FILES } from '../../consts/files';
 import { TreeDepthCalculator } from './depthCalculator';
 
@@ -7,6 +7,7 @@ const initialState = {
   files: []
 };
 export const FilesReducer = (state = initialState, action) => {
+  const allFiles = map(cloneDeep(FILES));
   if (!this.treeDepthCalculator) {
     this.treeDepthCalculator = new TreeDepthCalculator();
   }
@@ -15,35 +16,50 @@ export const FilesReducer = (state = initialState, action) => {
     case FILES_ACTION_TYPES.GET_ALL_FILES:
       return { ...state, files: map(action.payload) };
     case FILES_ACTION_TYPES.GET_FILES_BY_ID:
-      const concatFiles = chain(state.files)
+      const stateFiles = chain(state.files)
         .flatten()
-        .concat(action.payload)
         .uniqBy('id')
         .value();
 
       const filesWithCalculatedDepth = this.treeDepthCalculator
-        .getFilesTreeDepth(concatFiles, map(cloneDeep(FILES)));
+        .getFilesTreeDepth(stateFiles, allFiles);
 
-      const filesById = chain(filesWithCalculatedDepth)
-        .groupBy('depth')
-        .map()
+      const newFilesWithCalculatedDepth = this.treeDepthCalculator
+        .getFilesTreeDepth(action.payload, allFiles);
+
+      const stateFilesGrouped = groupBy(filesWithCalculatedDepth, 'depth');
+      const newFilesGrouped = groupBy(newFilesWithCalculatedDepth, 'depth');
+
+      const newFilesDepth = chain(newFilesGrouped)
+        .keys()
+        .head()
         .value();
-      console.log('filesById', filesById);
 
-      return { ...state, files: filesById };
+      const filesToReturn = chain(stateFilesGrouped)
+        .assign(newFilesGrouped)
+        .map()
+        .slice(0, newFilesDepth)
+        .value();
+
+      return { ...state, files: filesToReturn };
     case FILES_ACTION_TYPES.SEARCH_FILES_BY_TITLE:
       const searchTerm = escapeRegExp(action.payload);
       const regex = new RegExp(searchTerm, 'i');
-      const allFiles = map(cloneDeep(FILES));
 
       const filesWithDepth = this.treeDepthCalculator
         .getFilesTreeDepth(allFiles, allFiles);
 
-      const files = chain(filesWithDepth)
-        .filter(file => file.title.match(regex))
-        .groupBy('depth')
-        .map()
-        .value();
+      const files = searchTerm
+        ? chain(filesWithDepth)
+          .filter(file => file.title.match(regex))
+          .groupBy('depth')
+          .map()
+          .value()
+        : chain(filesWithDepth)
+          .groupBy('depth')
+          .map()
+          .slice(0, 1)
+          .value() ;
 
       return { ...state, files };
     default:

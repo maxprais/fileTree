@@ -1,7 +1,7 @@
 import store from '../../store/index';
 import { FILES_ACTION_TYPES } from './actionTypes';
 import { FILES } from '../../consts/files';
-import { map, filter, get, cloneDeep } from 'lodash';
+import { map, filter, cloneDeep } from 'lodash';
 
 export const getAllFiles = () => {
   const allFiles = cloneDeep(FILES);
