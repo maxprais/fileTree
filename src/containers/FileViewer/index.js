@@ -2,13 +2,14 @@ import React from "react";
 import { FileBranch } from '../../components/FileBranch';
 import { FilterTools } from '../FilterTools';
 import { connect } from "react-redux";
-import { getFilesById, searchFilesByTitle } from '../../actions/filesData/filesData';
+import { getFilesById, searchFilesByTitle, sortFiles } from '../../actions/filesData/filesData';
 import { size } from 'lodash';
 import './style.css';
 
 const mapDispatchToProps = () => ({
   getFilesById: (id) => getFilesById(id),
-  searchFilesByTitle: (text) => searchFilesByTitle(text)
+  searchFilesByTitle: (text) => searchFilesByTitle(text),
+  sortFiles: (sortValue) => sortFiles(sortValue)
 });
 
 const mapStateToProps = state => ({
@@ -33,9 +34,10 @@ class FileViewerElm extends React.Component {
     this.props.getFilesById(id);
   }
 
-  onElementChange(key, text) {
+  onElementChange(key, value) {
     let conditions = {
-      search: () => this.props.searchFilesByTitle(text)
+      search: () => this.props.searchFilesByTitle(value),
+      sort: () => this.props.sortFiles(value)
     };
     conditions[key].apply();
   }
@@ -44,6 +46,7 @@ class FileViewerElm extends React.Component {
     const branchStyle = {
       gridTemplateColumns: `repeat(${size(this.props.files)}, 300px)`
     };
+    console.log('this.props.files', this.props.files);
 
     return (
       <div className="file-viewer"

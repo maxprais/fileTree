@@ -1,10 +1,13 @@
 .file-branch {
-  padding-right: 10px;
+  border-right: 2px solid #d3d3d3;
+  border-bottom: none;
+  padding: 0 20px;
 }
 
 @media (max-width: 720px) {
   .file-branch {
     border-bottom: 2px solid #d3d3d3;
+    border-right: none;
     padding: 20px 0;
   }
 }

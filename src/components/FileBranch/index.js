@@ -24,6 +24,8 @@ export class FileBranch extends React.Component {
           <File key={index}
                 id={file.id}
                 title={file.title}
+                createdAt={file.createdAt}
+                modifiedAt={file.modifiedAt}
                 selectedFileId={this.state.selectedFileId}
                 onSelect={this.onFileSelect}/>
           )

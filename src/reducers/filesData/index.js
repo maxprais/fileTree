@@ -62,6 +62,13 @@ export const FilesReducer = (state = initialState, action) => {
           .value() ;
 
       return { ...state, files };
+    case FILES_ACTION_TYPES.SORT_FILES:
+      const sortedFiles = chain(state.files)
+        .flatten()
+        .sortBy(action.payload)
+        .value();
+
+      return { ...state, files: [sortedFiles] };
     default:
       return state;
   }

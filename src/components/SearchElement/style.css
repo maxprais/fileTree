@@ -1,9 +1,9 @@
 .search-field {
+  align-self: center;
   border-radius: 15px;
   border-style: none;
   box-shadow: inset 0 1px 4px 1px rgba(0, 0, 0, 0.3);
   height: 35px;
-  align-self: center;
   font-size: 1em;
   padding-left: 15px;
 }

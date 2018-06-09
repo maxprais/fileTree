@@ -17,3 +17,7 @@ export const getFilesById = (id) => {
   const groupedFiles = filter(allFiles, { parentId: id });
   store.dispatch({ type: FILES_ACTION_TYPES.GET_FILES_BY_ID, payload: groupedFiles });
 };
+
+export const sortFiles = (sortValue) => {
+  store.dispatch({ type: FILES_ACTION_TYPES.SORT_FILES, payload: sortValue });
+};
