@@ -1,6 +1,7 @@
 import React from "react";
 import { File } from '../../components/File';
 import PropTypes from 'prop-types';
+import { isEqual } from 'lodash';
 import './style.css';
 
 export class FileBranch extends React.Component {
@@ -11,6 +12,12 @@ export class FileBranch extends React.Component {
       selectedFileId: null
     };
     this.onFileSelect = this.onFileSelect.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (!isEqual(nextProps.files, this.props.files)) {
+      this.setState({ selectedFileId: null });
+    }
   }
 
   onFileSelect(id) {

@@ -46,7 +46,6 @@ class FileViewerElm extends React.Component {
     const branchStyle = {
       gridTemplateColumns: `repeat(${size(this.props.files)}, 300px)`
     };
-    console.log('this.props.files', this.props.files);
 
     return (
       <div className="file-viewer"
