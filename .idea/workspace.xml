@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be4f94d6-9c5c-405a-9b68-332b6b6f8ddb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/filesData/filesData.js" afterPath="$PROJECT_DIR$/src/actions/filesData/filesData.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/File/index.js" afterPath="$PROJECT_DIR$/src/components/File/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/FileBranch/index.js" afterPath="$PROJECT_DIR$/src/components/FileBranch/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/FileBranch/style.css" afterPath="$PROJECT_DIR$/src/components/FileBranch/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/SearchElement/index.js" afterPath="$PROJECT_DIR$/src/components/SearchElement/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/SearchElement/style.css" afterPath="$PROJECT_DIR$/src/components/SearchElement/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/FileViewer/index.js" afterPath="$PROJECT_DIR$/src/containers/FileViewer/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/FileViewer/style.css" afterPath="$PROJECT_DIR$/src/containers/FileViewer/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/FilterTools/style.css" afterPath="$PROJECT_DIR$/src/containers/FilterTools/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/MasterPage/index.js" afterPath="$PROJECT_DIR$/src/containers/MasterPage/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.css" afterPath="$PROJECT_DIR$/src/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/filesData/depthCalculator.js" afterPath="$PROJECT_DIR$/src/reducers/filesData/depthCalculator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/filesData/index.js" afterPath="$PROJECT_DIR$/src/reducers/filesData/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -48,14 +33,24 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/FileViewer/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+            <state relative-caret-position="500">
+              <caret line="52" column="50" lean-forward="true" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <marker date="1528551333000" expanded="true" signature="1258:1521" ph="..." />
-                <marker date="1528551333000" expanded="true" signature="1371:1498" ph="..." />
-                <marker date="1528551333000" expanded="true" signature="1427:1498" ph="..." />
+                <marker date="1528552244000" expanded="true" signature="1258:1613" ph="..." />
+                <marker date="1528552244000" expanded="true" signature="1410:1549" ph="..." />
+                <marker date="1528552244000" expanded="true" signature="1474:1549" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="files.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/consts/files.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1785">
+              <caret line="119" column="32" lean-forward="true" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -82,7 +77,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reducers/filesData/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="470">
@@ -121,16 +116,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="72" lean-forward="false" selection-start-line="4" selection-start-column="72" selection-end-line="4" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -186,10 +171,10 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/containers/FileViewer/style.css" />
         <option value="$PROJECT_DIR$/src/components/FileBranch/style.css" />
-        <option value="$PROJECT_DIR$/src/containers/FileViewer/index.js" />
         <option value="$PROJECT_DIR$/src/components/File/style.css" />
         <option value="$PROJECT_DIR$/src/containers/FilterTools/style.css" />
         <option value="$PROJECT_DIR$/src/reducers/filesData/index.js" />
+        <option value="$PROJECT_DIR$/src/containers/FileViewer/index.js" />
       </list>
     </option>
   </component>
@@ -568,12 +553,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1527671654400</updated>
-      <workItem from="1527671655760" duration="37425000" />
+      <workItem from="1527671655760" duration="37618000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37425000" />
+    <option name="totallyTimeSpent" value="37618000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -718,14 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/consts/files.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="119" column="32" lean-forward="true" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -786,19 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/FileViewer/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <marker date="1528551333000" expanded="true" signature="1258:1521" ph="..." />
-            <marker date="1528551333000" expanded="true" signature="1371:1498" ph="..." />
-            <marker date="1528551333000" expanded="true" signature="1427:1498" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/FileBranch/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -848,6 +812,27 @@
           <folding>
             <element signature="e#0#73#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/FileViewer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="52" column="50" lean-forward="true" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <marker date="1528552244000" expanded="true" signature="1258:1613" ph="..." />
+            <marker date="1528552244000" expanded="true" signature="1410:1549" ph="..." />
+            <marker date="1528552244000" expanded="true" signature="1474:1549" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/consts/files.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1785">
+          <caret line="119" column="32" lean-forward="true" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>

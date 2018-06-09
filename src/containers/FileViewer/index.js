@@ -49,11 +49,13 @@ class FileViewerElm extends React.Component {
       <div className="file-viewer"
            style={branchStyle}>
         <FilterTools onElementChange={this.onElementChange} />
-        {this.props.files.map((files, index) =>
-          <FileBranch key={index}
-                      files={files}
-                      onFileSelect={this.onFileSelect} />
-        )}
+        {size(this.props.files) > 0
+          ? this.props.files.map((files, index) =>
+              <FileBranch key={index}
+                          files={files}
+                          onFileSelect={this.onFileSelect} />)
+          : <span>No files found!</span>
+        }
       </div>
     )
   }
