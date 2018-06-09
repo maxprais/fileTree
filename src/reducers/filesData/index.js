@@ -66,9 +66,11 @@ export const FilesReducer = (state = initialState, action) => {
       const sortedFiles = chain(state.files)
         .flatten()
         .sortBy(action.payload)
+        .groupBy('depth')
+        .map()
         .value();
 
-      return { ...state, files: [sortedFiles] };
+      return { ...state, files: sortedFiles };
     default:
       return state;
   }

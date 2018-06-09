@@ -4,13 +4,13 @@ export class TreeDepthCalculator {
 
   getFilesTreeDepth(files, allFiles) {
     return map(files, (file) => {
-      const depth = this.getFileTreeDepth(file.parentId, allFiles);
+      const depth = this._getFileTreeDepth(file.parentId, allFiles);
       set(file, 'depth', depth);
       return file;
     })
   }
 
-  getFileTreeDepth(parentId, allFiles) {
+  _getFileTreeDepth(parentId, allFiles) {
     let nextParentId = parentId;
     let depth = 1;
 
