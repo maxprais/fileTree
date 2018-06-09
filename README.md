@@ -3,7 +3,7 @@
 ```
 Run instructions:
 
-git clone: https://github.com/maxprais/fileTree
+git clone: https://github.com/maxprais/fileTree.git
 
 npm install
 
