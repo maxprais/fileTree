@@ -9,12 +9,12 @@
   background-color: #0d62b5;
   box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.5);
   display: grid;
-  grid-template-columns: 100px 40% 20%;
+  grid-template-columns: 100px 40% 5%;
   height: 60px;
 }
 @media (max-width: 720px) {
   .filter-tools-header {
-    grid-template-columns: 100px 55% 10% auto;
+    grid-template-columns: 100px 55% 10%;
   }
 }
 
